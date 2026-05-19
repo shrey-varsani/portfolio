@@ -1,0 +1,9 @@
+{
+  "name": "shrey-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'No build required for static site'",
+    "start": "node -e \"const http = require('http'); const fs = require('fs'); const path = require('path'); http.createServer((req, res) => { let p = '.' + (req.url === '/' ? '/index.html' : req.url); if (!fs.existsSync(p)) p = './index.html'; const ext = path.extname(p); const types = { '.js': 'text/javascript', '.css': 'text/css', '.html': 'text/html', '.png': 'image/png', '.jpg': 'image/jpeg' }; res.writeHead(200, { 'Content-Type': types[ext] || 'text/plain' }); fs.createReadStream(p).pipe(res); }).listen(3000, '0.0.0.0');\""
+  }
+}
