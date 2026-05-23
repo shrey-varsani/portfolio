@@ -1,6 +1,0 @@
-{
-  "name": "DevFlex Portfolio",
-  "description": "A modern developer portfolio featuring detailed project case studies, interactive modals, and a dark-mode responsive design.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
