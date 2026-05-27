@@ -1,6 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-
 # Shrey Varsani | Portfolio
 
 A lightweight, high-performance developer portfolio built entirely with **Web Technologies**. No frameworks, no build steps, and zero-configuration required.
