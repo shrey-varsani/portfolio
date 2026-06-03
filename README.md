@@ -1,9 +1,5 @@
 # Shrey Varsani | Portfolio
 
-A lightweight, high-performance developer portfolio built entirely with **Web Technologies**. No frameworks, no build steps, and zero-configuration required.
-
-</div>
-
 ## Features
 
 - **Dynamic Project Gallery:** Renders projects dynamically from data objects with support for category filtering and live search.
@@ -47,6 +43,5 @@ This project is a **static web application**. It does not require a build proces
 - `index.html` - The structural foundation and SEO metadata.
 - `style.css` - All styling logic, including theme variables (Dark/Light mode).
 - `script.js` - Application logic: data management, UI interactions, and state.
-- `package.json` - Defines the build-less execution environment and local server.
 - `metadata.json` - Configuration for AI Studio / Gemini API capabilities.
 - `files/` - Static assets including resume (PDF) and profile imagery.

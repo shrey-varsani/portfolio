@@ -38,7 +38,7 @@ const PROJECTS = [
     tech: ["React", "Express", "PostgreSQL", "Socket.io"],
     category: "Web App",
     link: "https://onlineexamsystem-jdbg.onrender.com/",
-    githubRepo: "https://github.com/shrey-varsani/online-exam-system",
+    githubRepo: "https://github.com/shrey-varsani/onlineExamSystem.git",
     image: "online_exam.png",
     extraImages: ["input_file_2.png"],
   },
