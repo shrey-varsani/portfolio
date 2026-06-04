@@ -2,17 +2,17 @@
 const PROJECTS = [
   {
     id: 1,
-    title: "Distributed Task Queue & Job Scheduler",
+    title: "Online Exam System",
     description:
-      "A robust background processing system designed for reliability and high availability. Featuring Redis-backed queueing, job retry logic, and dynamic horizontal scaling of worker nodes.",
+      "A secure and scalable platform for digital examinations. Features include automated proctoring using computer vision, dynamic question generation, and real-time performance analytics.",
     longDescription:
-      "This project implements a highly scalable distributed task queue system using Node.js and Redis. It handles background jobs such as email processing, data indexing, and heavy computational tasks. The system features automatic retries with exponential backoff, progress tracking, and a real-time monitor dashboard using WebSockets. It was built to solve the challenge of processing thousands of concurrent jobs without blocking the main application thread.",
-    tech: ["Node.js", "Redis", "BullMQ", "Docker"],
-    category: "Backend",
-    link: "#",
-    githubRepo: "https://github.com/shrey-varsani/distributed-task-queue",
-    image: "que_job_schedular.png",
-    extraImages: ["input_file_0.png"],
+      "A comprehensive digital assessment platform designed for educational institutions. The system includes a sophisticated examiner dashboard for exam creation and live monitoring, and a secure taker interface. It implements automated grading for various question types and generates detailed analytics reports for performance evaluation. Built with high security in mind to prevent unfair practices during online exams.",
+    tech: ["React", "Express", "PostgreSQL", "Socket.io"],
+    category: "Web App",
+    link: "https://onlineexamsystem-jdbg.onrender.com/",
+    githubRepo: "https://github.com/shrey-varsani/onlineExamSystem.git",
+    image: "online_exam.png",
+    extraImages: ["input_file_2.png"],
   },
   {
     id: 2,
@@ -30,20 +30,6 @@ const PROJECTS = [
   },
   {
     id: 3,
-    title: "Online Exam System",
-    description:
-      "A secure and scalable platform for digital examinations. Features include automated proctoring using computer vision, dynamic question generation, and real-time performance analytics.",
-    longDescription:
-      "A comprehensive digital assessment platform designed for educational institutions. The system includes a sophisticated examiner dashboard for exam creation and live monitoring, and a secure taker interface. It implements automated grading for various question types and generates detailed analytics reports for performance evaluation. Built with high security in mind to prevent unfair practices during online exams.",
-    tech: ["React", "Express", "PostgreSQL", "Socket.io"],
-    category: "Web App",
-    link: "https://onlineexamsystem-jdbg.onrender.com/",
-    githubRepo: "https://github.com/shrey-varsani/onlineExamSystem.git",
-    image: "online_exam.png",
-    extraImages: ["input_file_2.png"],
-  },
-  {
-    id: 4,
     title: "Offline Peer-to-Peer Encrypted Messaging System",
     description:
       "A decentralized messaging platform that works over local networks without internet access. Uses end-to-end encryption and automatic peer discovery.",
@@ -59,9 +45,23 @@ const PROJECTS = [
     ],
     category: "Security",
     link: "#",
-    githubRepo: "https://github.com/shrey-varsani/offline-p2p-chat",
+    githubRepo: "https://github.com/shrey-varsani/p2p-messaging.git",
     image: "p2p_messaging.png",
     extraImages: ["input_file_3.png"],
+  },
+  {
+    id: 4,
+    title: "Data Structures & Algorithms Repository",
+    description:
+      "A comprehensive collection of Data Structures and Algorithms implementations and interview-focused coding problems. Features topic-wise organization, optimized solutions, and complexity analysis for efficient learning and preparation.",
+    longDescription:
+      "A structured repository covering fundamental and advanced Data Structures and Algorithms concepts, including Arrays, Strings, Linked Lists, Stacks, Queues, Trees, Binary Search Trees, Heaps, Graphs, Dynamic Programming, Greedy Algorithms, Backtracking, Tries, and more. The repository contains solutions to important coding interview questions with optimized approaches, detailed explanations, and time-space complexity analysis. Designed as both a learning resource and a practical reference for technical interview preparation, competitive programming, and problem-solving skill development.",
+    tech: ["Java", "Data Structures", "Algorithms", "Problem Solving"],
+    category: "Educational Resource",
+    link: "#",
+    githubRepo: "https://github.com/shrey-varsani/DSA.git",
+    image: "DSA.png",
+    extraImages: [],
   },
 ];
 
@@ -436,7 +436,7 @@ function openProjectModal(projectId) {
                 
                 <div class="modal-actions">
                     ${
-                      project.link !== "#"
+                      project.link && project.link !== "#"
                         ? `
                         <a href="${project.link}" target="_blank" class="btn-primary-small flex-center gap-2">
                              Live Demo <i data-lucide="external-link" size="16"></i>
