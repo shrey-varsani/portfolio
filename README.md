@@ -1,47 +1,31 @@
 # Shrey Varsani | Portfolio
 
+[**Live Demo**](https://shrey-varsani.vercel.app/)
+
+A high-performance developer portfolio built with pure HTML, CSS, and JavaScript.
+
 ## Features
 
-- **Dynamic Project Gallery:** Renders projects dynamically from data objects with support for category filtering and live search.
-- **Interactive Modals:** Detailed project deep-dives with image galleries and technology tagging.
-- **Responsive UI:** Seamless experience across mobile, tablet, and desktop using CSS Grid and Flexbox.
-- **Theme Management:** Smart dark-mode detection with persistence using `localStorage`.
-- **Animated Expertise:** Skill visualization with intersection-observer triggered animations.
-- **Contact System:** Integrated form handling via Formspree for direct client communication.
+- **Dynamic Projects:** Filtering and live search support.
+- **Interactive Modals:** Detailed project views with galleries.
+- **Responsive UI:** Optimized for all screen sizes using Grid and Flexbox.
+- **Theme Support:** Dark mode detection and persistence.
+- **Skill Animations:** Intersection Observer powered visualizations.
+- **Contact Form:** Integrated via Formspree.
 
 ## Tech Stack
 
-**Frontend:**
-
-- **Structure:** Pure HTML5
-- **Styling:** Modern CSS3 (utilizing CSS Variables and Grid/Flexbox)
-- **Logic:** Vanilla JavaScript (ES6+) — _No frameworks or external libraries for core functionality_
-- **Icons:** Lucide, Font Awesome 6, Boxicons
+- **Frontend:** HTML5, CSS3, Vanilla JS (ES6+).
+- **Icons:** Lucide, Font Awesome 6, Boxicons.
 
 ## Local Development
 
-This project is a **static web application**. It does not require a build process, compilers, or complex environment variables to run.
-
-### Setup Instructions
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/shrey-varsani/shrey-portfolio.git
-   cd shrey-portfolio
-   ```
-
-2. **Launch the environment:**
-
-   You can view the portfolio using following method:
-
-   **Method A: Direct Launch (No Setup)**
-   Simply double-click `index.html` to open it directly in your web browser.
+1. Clone the repository: `git clone https://github.com/shrey-varsani/shrey-portfolio.git`
+2. Open `index.html` in your browser.
 
 ## Project Structure
 
-- `index.html` - The structural foundation and SEO metadata.
-- `style.css` - All styling logic, including theme variables (Dark/Light mode).
-- `script.js` - Application logic: data management, UI interactions, and state.
-- `metadata.json` - Configuration for AI Studio / Gemini API capabilities.
-- `files/` - Static assets including resume (PDF) and profile imagery.
+- `index.html`: Foundation and SEO.
+- `style.css`: Styling and theme variables.
+- `script.js`: Core logic and data management.
+- `files/`: Static assets (Resume, Images).
