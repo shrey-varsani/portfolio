@@ -45,7 +45,7 @@ const PROJECTS = [
     ],
     category: "Security",
     link: "#",
-    githubRepo: "https://github.com/shrey-varsani/p2p-messaging.git",
+    githubRepo: "https://github.com/shrey-varsani/p2p-networking.git",
     image: "p2p_messaging.png",
     extraImages: ["input_file_3.png"],
   },
