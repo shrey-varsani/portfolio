@@ -106,11 +106,11 @@ function initTheme() {
   const themeToggle = document.getElementById("theme-toggle");
   const mobileThemeToggle = document.getElementById("mobile-theme-toggle");
 
-  // Icons
-  const sunIcons = document.querySelectorAll(".sun-icon, #sun-icon");
-  const moonIcons = document.querySelectorAll(".moon-icon, #moon-icon");
-
   function setTheme(isDark) {
+    // Query icons dynamically because Lucide might recreate them from <i> to <svg> multiple times
+    const sunIcons = document.querySelectorAll(".sun-icon, #sun-icon");
+    const moonIcons = document.querySelectorAll(".moon-icon, #moon-icon");
+
     if (isDark) {
       document.documentElement.classList.add("dark");
       document.body.classList.add("dark");
@@ -331,9 +331,7 @@ function renderProjects() {
                 <div class="project-tags">
                     ${project.tech.map((t) => `<span class="tag">${t}</span>`).join("")}
                 </div>
-                <h3 class="project-title">
-                    <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-title-link" onclick="event.stopPropagation()">${project.title}</a>
-                </h3>
+                <h3 class="project-title"><span class="project-title-link">${project.title}</span></h3>
                 <p class="project-desc line-clamp-2">${project.description}</p>
                 <div class="project-footer">
                     <span class="case-study-link">
@@ -365,17 +363,20 @@ function initProjectModal() {
 
   closeBtn.addEventListener("click", () => {
     window.location.hash = "";
+    window.location.hash = "projects";
   });
 
   // Close on backdrop click
   modal.addEventListener("click", (e) => {
     if (e.target === modal) window.location.hash = "";
+    if (e.target === modal) window.location.hash = "projects";
   });
 
   // Close on Escape key
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !modal.classList.contains("hidden")) {
       window.location.hash = "";
+      window.location.hash = "projects";
     }
   });
 
