@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=DynaPuff:wght@400..700&family=Chewy&family=Akaya+Kanadaka&display=swap');
 
 :root {
-    /* Color Palette */
     --background: #fdfdfd;
     --foreground: #1a1a1a;
     --primary: #754ef9;
@@ -13,14 +12,12 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
     --primary-rgba: rgba(78, 106, 249, 0.4);
 
-    /* Fonts */
     --font-sans: "Fraunces", Georgia, serif;
     --font-display: "Fraunces", Georgia, serif;
     --font-accent: "DynaPuff", system-ui, sans-serif;
     --font-fun: "Chewy", system-ui, sans-serif;
     --font-script: "Akaya Kanadaka", cursive, sans-serif;
 
-    /* Typography & Layout */
     --text-fluid-h1: clamp(2.5rem, 8vw + 1rem, 8rem);
     --text-fluid-h2: clamp(1.8rem, 5vw + 1rem, 4.5rem);
     --max-width: 80rem;
@@ -38,7 +35,6 @@
     --primary-rgba: rgba(117, 78, 249, 0.6);
 }
 
-/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -80,7 +76,6 @@ img {
     display: block;
 }
 
-/* Layout Helpers */
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -144,7 +139,6 @@ img {
 .overflow-hidden { overflow: hidden; }
 .z-50 { z-index: 50; }
 
-/* Grid Gaps */
 .gap-2 { 
     gap: 0.5rem; 
 }
@@ -167,7 +161,6 @@ img {
     gap: 3rem;
 }
 
-/* Typography */
 .font-display { font-family: var(--font-display); }
 .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 .font-bold { 
@@ -216,7 +209,6 @@ img {
     color: var(--primary); 
 }
 
-/* Prevent browser autofill from overriding background and text colors */
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus,
@@ -266,9 +258,6 @@ textarea:-webkit-autofill:focus {
   to { transform: scaleX(1); }
 }
 
-/* Components */
-
-/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -954,7 +943,6 @@ textarea:-webkit-autofill:focus {
     opacity: 0.7;
 }
 
-/* Skills */
 .section-skills {
     background-color: var(--card-bg);
 }
@@ -1076,7 +1064,6 @@ textarea:-webkit-autofill:focus {
     filter: brightness(1.2);
 }
 
-/* Contact */
 .contact-card {
     background-color: var(--card-bg);
     border-radius: 2rem;
@@ -1237,7 +1224,6 @@ textarea.input-field {
     to { transform: rotate(360deg); }
 }
 
-/* Footer */
 .footer {
     padding: 3rem 0;
     border-top: 1px solid var(--border-color);
@@ -1255,7 +1241,6 @@ textarea.input-field {
     letter-spacing: 0.02em;
 }
 
-/* Scroll to top */
 #scroll-to-top {
   position: fixed;
   bottom: 2rem;
@@ -1286,15 +1271,7 @@ textarea.input-field {
 .transform { --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)); }
 .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
 .duration-700 { transition-duration: 700ms; }
-/* 
-/* Scrollbar */
-/*
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--background); }
-::-webkit-scrollbar-thumb { background: var(--dim); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: var(--secondary); } */
 
-/* Modal Styles */
 .modal {
     position: fixed;
     top: 0;
@@ -1445,7 +1422,6 @@ textarea.input-field {
     justify-content: center;
 }
 
-/* Cursor pointer for interactive elements */
 .cursor-pointer {
     cursor: pointer;
 }

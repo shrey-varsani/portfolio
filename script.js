@@ -1,4 +1,3 @@
-// --- Data ---
 const PROJECTS = [
   {
     id: 1,
@@ -75,13 +74,10 @@ const SKILLS = [
   { name: "Git/GitHub", level: 85 },
 ];
 
-// --- State Management ---
 let currentCategory = "All";
 let currentSearchQuery = "";
 
-// --- initialization ---
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize Lucide icons first so they are available for other functions
   if (typeof lucide !== "undefined") {
     lucide.createIcons();
   }
@@ -101,13 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initResumeButtons();
 });
 
-// --- Theme Management ---
 function initTheme() {
   const themeToggle = document.getElementById("theme-toggle");
   const mobileThemeToggle = document.getElementById("mobile-theme-toggle");
 
   function setTheme(isDark) {
-    // Query icons dynamically because Lucide might recreate them from <i> to <svg> multiple times
     const sunIcons = document.querySelectorAll(".sun-icon, #sun-icon");
     const moonIcons = document.querySelectorAll(".moon-icon, #moon-icon");
 
@@ -126,7 +120,6 @@ function initTheme() {
     }
   }
 
-  // Initial check
   const savedTheme = localStorage.getItem("theme");
   const systemPrefersDark = window.matchMedia(
     "(prefers-color-scheme: dark)",
@@ -144,19 +137,15 @@ function initTheme() {
     mobileThemeToggle.addEventListener("click", toggleHandler);
 }
 
-// --- Resume Buttons ---
 function initResumeButtons() {
   const viewBtn = document.getElementById("view-resume");
   const downloadBtn = document.getElementById("download-resume");
 
-  // For portfolio demo, we can use a generic placeholder PDF or just a link to a resource
-  // Replacing with actual links if available, otherwise using placeholder behavior
   const resumeUrl = "files/shrey_resume.pdf";
 
   if (viewBtn) {
     viewBtn.href = resumeUrl;
     viewBtn.addEventListener("click", (e) => {
-      // Optional: log analytics or add additional feedback
       console.log("Viewing resume...");
     });
   }
@@ -164,13 +153,11 @@ function initResumeButtons() {
   if (downloadBtn) {
     downloadBtn.href = resumeUrl;
     downloadBtn.addEventListener("click", (e) => {
-      // Optional: log analytics or add additional feedback
       console.log("Downloading resume...");
     });
   }
 }
 
-// --- Mobile Menu ---
 function initMobileMenu() {
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -183,7 +170,6 @@ function initMobileMenu() {
     closeIcon.classList.toggle("hidden");
   });
 
-  // Close menu on link click
   mobileMenu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       mobileMenu.classList.add("hidden");
@@ -193,7 +179,6 @@ function initMobileMenu() {
   });
 }
 
-// --- Navbar Scroll ---
 function initNavbarScroll() {
   const nav = document.querySelector("nav");
   const handleScroll = () => {
@@ -204,10 +189,9 @@ function initNavbarScroll() {
     }
   };
   window.addEventListener("scroll", handleScroll, { passive: true });
-  handleScroll(); // Initial check
+  handleScroll();
 }
 
-// --- Smooth Scroll with Offset ---
 function initSmoothScroll() {
   const nav = document.querySelector("nav");
 
@@ -220,7 +204,6 @@ function initSmoothScroll() {
       if (targetElement) {
         e.preventDefault();
 
-        // Recalculate nav height in case it changed (scrolled vs not)
         const navHeight = nav.offsetHeight;
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.scrollY - navHeight;
@@ -230,21 +213,19 @@ function initSmoothScroll() {
           behavior: "smooth",
         });
 
-        // Update URL hash without jumping
         history.pushState(null, null, href);
       }
     });
   });
 }
 
-// --- Active Section Highlighting ---
 function initActiveScrollHighlight() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link, #mobile-menu a");
 
   const observerOptions = {
     root: null,
-    rootMargin: "-20% 0px -70% 0px", // Adjusted to trigger when section is in the upper middle
+    rootMargin: "-20% 0px -70% 0px",
     threshold: 0,
   };
 
@@ -264,7 +245,6 @@ function initActiveScrollHighlight() {
 
   sections.forEach((section) => observer.observe(section));
 
-  // Special case for top of page
   window.addEventListener(
     "scroll",
     () => {
@@ -281,7 +261,6 @@ function initActiveScrollHighlight() {
   );
 }
 
-// --- Project Rendering & Filtering ---
 function renderProjects() {
   const container = document.getElementById("projects-grid");
   container.innerHTML = "";
@@ -311,7 +290,6 @@ function renderProjects() {
                 <p class="text-secondary text-sm">Try adjusting your search or filters to find what you're looking for.</p>
             </div>
         `;
-    // Initialize Lucide for the empty state icon
     if (typeof lucide !== "undefined") {
       lucide.createIcons();
     }
@@ -348,13 +326,11 @@ function renderProjects() {
     container.appendChild(card);
   });
 
-  // Re-initialize Lucide for the newly added project cards
   if (typeof lucide !== "undefined") {
     lucide.createIcons();
   }
 }
 
-// --- Project Modal & Routing ---
 function initProjectModal() {
   const modal = document.getElementById("project-modal");
   const closeBtn = document.getElementById("modal-close");
@@ -366,13 +342,11 @@ function initProjectModal() {
     window.location.hash = "projects";
   });
 
-  // Close on backdrop click
   modal.addEventListener("click", (e) => {
     if (e.target === modal) window.location.hash = "";
     if (e.target === modal) window.location.hash = "projects";
   });
 
-  // Close on Escape key
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !modal.classList.contains("hidden")) {
       window.location.hash = "";
@@ -380,10 +354,8 @@ function initProjectModal() {
     }
   });
 
-  // Handle initial hash on load
   handleHashChange();
 
-  // Listen for hash changes
   window.addEventListener("hashchange", handleHashChange);
 }
 
@@ -454,9 +426,8 @@ function openProjectModal(projectId) {
     `;
 
   modal.classList.remove("hidden");
-  document.body.style.overflow = "hidden"; // Prevent scrolling
+  document.body.style.overflow = "hidden";
 
-  // Re-initialize Lucide for modal content
   if (typeof lucide !== "undefined") {
     lucide.createIcons();
   }
@@ -465,7 +436,7 @@ function openProjectModal(projectId) {
 function closeProjectModal() {
   const modal = document.getElementById("project-modal");
   modal.classList.add("hidden");
-  document.body.style.overflow = ""; // Restore scrolling
+  document.body.style.overflow = "";
 }
 
 function initProjectFilters() {
@@ -525,7 +496,6 @@ function initProjectSearch() {
   });
 }
 
-// --- Skill Animations ---
 function initSkillAnimations() {
   const container = document.getElementById("skills-container");
   if (!container) return;
@@ -554,7 +524,6 @@ function initSkillAnimations() {
           items.forEach((item, idx) => {
             item.classList.remove("opacity-0", "translate-y-4");
             const bar = item.querySelector(".skill-progress");
-            // Small delay to let the item animation start first
             setTimeout(
               () => {
                 bar.style.width = `${bar.dataset.level}%`;
@@ -572,7 +541,6 @@ function initSkillAnimations() {
   observer.observe(container);
 }
 
-// --- Scroll To Top ---
 function initScrollToTop() {
   const btn = document.getElementById("scroll-to-top");
   window.addEventListener("scroll", () => {
@@ -588,7 +556,6 @@ function initScrollToTop() {
   });
 }
 
-// --- Contact Form Validation & Submission ---
 function initContactForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
@@ -650,7 +617,6 @@ function initContactForm() {
         throw new Error("Form submission failed");
       }
     } catch (error) {
-      // Error State
       btn.classList.remove("is-loading");
       btn.classList.add("is-error");
       btn.innerHTML = `
