@@ -15,7 +15,7 @@ A high-performance developer portfolio built with pure HTML, CSS, and JavaScript
 
 ## Tech Stack
 
-- **Frontend:** HTML5, CSS3, Vanilla JS (ES6+).
+- **Frontend:** HTML5, CSS3, JS.
 - **Icons:** Lucide, Font Awesome 6, Boxicons.
 
 ## Local Development
