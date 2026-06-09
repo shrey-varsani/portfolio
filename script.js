@@ -23,7 +23,7 @@ const PROJECTS = [
     tech: ["SMTP", "React", "Node.js", "WebSockets"],
     category: "Full-Stack",
     link: "#",
-    githubRepo: "https://github.com/shrey-varsani/custom-email-system",
+    githubRepo: "https://github.com/shrey-varsani/cloud-mail-server.git",
     image: "mail_server.png",
     extraImages: ["input_file_1.png"],
   },
