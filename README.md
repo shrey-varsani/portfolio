@@ -20,7 +20,7 @@ A high-performance developer portfolio built with pure HTML, CSS, and JavaScript
 
 ## Local Development
 
-1. Clone the repository: `git clone https://github.com/shrey-varsani/shrey-portfolio.git`
+1. Clone the repository: `git clone https://github.com/shrey-varsani/portfolio.git`
 2. Open `index.html` in your browser.
 
 ## Project Structure
